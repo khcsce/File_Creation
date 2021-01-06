@@ -38,13 +38,15 @@ void sigsev_handler(int sig)
 void read_write()
 {
 	char buf;
-	while(read(0,&buf,1) > 0)
+	ssize_t s = read(0,&buf,1);
+	while(s > 0)
 	{
 		if(write(1,&buf,1) < 0)
 		{
 			fprintf(stderr, "--output error: Cannot write to output file: %s\n",strerror(errno));
 			exit(3);
 		}
+		s = read(0,&buf,1);
 	}
 }
 int main(int argc, char **argv){
