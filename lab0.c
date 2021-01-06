@@ -98,7 +98,7 @@ int main(int argc, char **argv){
 					close(ofd);
 				}
 				else {
-					fprintf(stderr, "--output option error: Could not create the output file %s ", optarg);
+					fprintf(stderr, "--output option error: Could not create the output file or not writable %s ", optarg);
 					fprintf(stderr, "%s\n", strerror(errno));
 					exit(3);
 					
