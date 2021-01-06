@@ -1,0 +1,48 @@
+NAME: Khoa Quach
+EMAIL: khoaquachschool@gmail.com
+ID: 105123806
+
+Content:
+
+lab0.c: code for lab0 that copies stdin to stdout with other options such
+as input/output files and causing segmentation faults
+
+--input=filename  to use file as standard input
+--output=filename to use the file as standard output
+It will create the file if it is not there)
+
+--segfault cause a segmentation faults
+--catch use SIGSEGV handler to catch the segmentation fault and logging an error message
+
+Makefile: 
+default ... builds lab0 exec, 
+check ... smoketest of lab0
+clean ... deletes files created by the Makefile
+dist ... builds a distribution tarball of files (including the screenshots .png)
+
+screenshots:
+backtrace.png... segementation fault and stack trace
+breakpoint.png ... breakpoint and print
+
+smoketests:
+#1,2,3
+Basic cases such as stdin to stdout
+testing with valid input file and output file
+Comparing if contents are the same
+#4
+Checks invalid option case. For example, --bogus as an option is used
+#5
+Checks nonwritable output file case by removing write permissions
+#6
+Checks for case where input file does not exist
+#7
+Segmentation fault case , when --segfault is used
+#8
+Catching segmentation fault case when both --segfault and --catch options are used
+
+
+Resources:
+man pages for open,creat,close,dup, read, write, signal,etc
+man page for getopt, getopt_long, etc
+https://www.gnu.org/software/libc/manual/html_node/Getopt-Long-Option-Example.html
+https://makefiletutorial.com/ 
