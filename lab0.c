@@ -29,7 +29,7 @@ void segfault_activate()
 void sigsev_handler(int sig)
 {
 	if(sig == SIGSEGV) { 
-		fprintf(stderr, "Segmentation fault (SIGSEGV handler that catches the segmentation fault)\n ");
+		fprintf(stderr, "Segmentation fault (SIGSEGV handler that catches the segmentation fault)\n");
 		exit(4); // exit(2) with a return code of 4.
 
 	}
@@ -48,6 +48,8 @@ void read_write()
 		}
 		s = read(0,&buf,1);
 	}
+	if (s < 0)
+	  fprintf(stderr, "--input error: Cannot read from input file: %s\n",strerror(errno));
 }
 int main(int argc, char **argv){
 	// Input and Output files
@@ -79,7 +81,7 @@ int main(int argc, char **argv){
 					close(ifd);
 				}
 				else {
-					fprintf(stderr, "--input option error: Could not open file %s ", optarg);
+					fprintf(stderr, "--input option error: Could not open the input file %s ", optarg);
 					fprintf(stderr, "%s\n", strerror(errno));
 					exit(2);
 					
@@ -94,7 +96,7 @@ int main(int argc, char **argv){
 					close(ofd);
 				}
 				else {
-					fprintf(stderr, "--output option error: Could not create outputfile %s ", optarg);
+					fprintf(stderr, "--output option error: Could not create the output file %s ", optarg);
 					fprintf(stderr, "%s\n", strerror(errno));
 					exit(3);
 					
