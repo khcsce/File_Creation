@@ -48,8 +48,10 @@ void read_write()
 		}
 		s = read(0,&buf,1);
 	}
-	if (s < 0)
+	if (s < 0){
 	  fprintf(stderr, "--input error: Cannot read from input file: %s\n",strerror(errno));
+	  exit(2);
+	}
 }
 int main(int argc, char **argv){
 	// Input and Output files
