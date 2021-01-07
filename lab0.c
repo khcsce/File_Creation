@@ -9,6 +9,7 @@
 #include <errno.h>
 #include <signal.h>
 #include <string.h>
+// Tested with new sanity script
 /*
 Summary of exit codes
 0 ... copy successful
