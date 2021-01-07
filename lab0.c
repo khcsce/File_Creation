@@ -112,10 +112,10 @@ int main(int argc, char **argv){
 				signal(SIGSEGV, sigsev_handler);
 				break;
 			case '?':
-				fprintf(stderr, "unrecognized argument! Correct usage: ./lab0 --input filename --output filename, --segfault, --catch\n");
+				fprintf(stderr, "unrecognized argument! Correct usage: ./lab0 --input=filename --output=filename, --segfault, --catch\n");
 				exit(1);
 			default:
-				fprintf(stderr, "unrecognized argument! Correct usage: ./lab0 --input filename --output filename, --segfault, --catch\n");
+				fprintf(stderr, "unrecognized argument! Correct usage: ./lab0 --input=filename --output=filename, --segfault, --catch\n");
 				exit(1);
 		}// switch
 	}// while
