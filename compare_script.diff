@@ -1,0 +1,4 @@
+312c312
+< for r in getopt_long 'sigaction\|signal' strerror close 'dup2\|dup'
+---
+> for r in getopt_long signal strerror close 'dup2\|dup'

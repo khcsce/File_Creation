@@ -309,7 +309,7 @@ fi
 
 
 echo "... use of expected routines"
-for r in getopt_long 'sigaction\|signal' strerror close 'dup2\|dup'
+for r in getopt_long signal strerror close 'dup2\|dup'
 do
 	c=`grep -c "$r(" *.c`
 	if [ $c -gt 0 ]

@@ -18,7 +18,7 @@ check: default basic_one basic_two basic_three invalid_option nonwritable_output
 	        echo "Smoke Check SUCCESSFUL"; \
 	fi
 clean:
-	rm -f lab0 *.o *.txt *.tar.gz *~
+	rm -f lab0 *.o *.tar.gz *~
 
 dist: 
 	tar -czvf lab0-105123806.tar.gz lab0.c Makefile *.png README
