@@ -1,0 +1,64 @@
+... using test directory /u/ee/ugrad/quach/lab0_gitfolder/CS111Lab0/CS111_test.quach
+... extracting /u/ee/ugrad/quach/lab0_gitfolder/CS111Lab0/lab0-105123806.tar.gz
+lab0.c
+Makefile
+backtrace.png
+breakpoint.png
+README
+... checking for README file
+... checking for submitter ID in README
+... checking for submitter email in README
+... checking for submitter name in README
+... checking slip-day use in README
+    no SLIPDAYS: entry
+... checking for other expected files
+... checking for required Make targets
+... checking for required compillation options
+... building default target(s)
+... checking make check
+hello world
+Smoke Check SUCCESSFUL
+... checking make dist
+lab0.c
+Makefile
+backtrace.png
+breakpoint.png
+README
+ ... checking make clean
+    restored to freshly untar-ed state ... OK
+... redo default make
+... checking for expected products
+... lab0 detects/reports bogus arguments
+        ./lab0: unrecognized option '--bogus'
+unrecognized argument! Correct usage: ./lab0 --input=filename --output=filename, --segfault, --catch
+... exercise bad --input from a nonexistent file
+        --input option error: Could not open the input file NON_EXISTENT_FILE No such file or directory
+... exercise bad --output to an unwritable file
+        --output option error: Could not create the output file or not writable CANT_TOUCH_THIS Permission denied
+... exercise --segfault option
+... exercise --catch --segfault option
+        Segmentation fault (SIGSEGV handler that catches the segmentation fault)
+... copy stdin -> stdout
+        data comparison ... OK
+... copy --input -> stdout
+        data comparison ... OK
+... copy stdin -> --output
+        data comparison ... OK
+... copy --input -> --output
+        data comparison ... OK
+... use of expected routines
+        getopt_long ... OK
+        sigaction\|signal ... OK
+        strerror ... OK
+        close ... OK
+        dup2\|dup ... OK
+
+THIS SUBMISSION WILL USE NO SLIP-DAYS
+
+THE ONLY STUDENTS WHO WILL RECEIVE CREDIT FOR THIS SUBMISSION ARE:
+    105123806    khoaquachschool@gmail.com
+
+... cleaning up temporary files
+... removing test directory /u/ee/ugrad/quach/lab0_gitfolder/CS111Lab0/CS111_test.quach
+
+SUBMISSION lab0-105123806.tar.gz ... passes sanity check
