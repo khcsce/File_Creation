@@ -21,7 +21,7 @@ clean:
 	rm -f lab0 *.o *.tar.gz *~
 
 dist: 
-	tar -czvf lab0-105123806.tar.gz lab0.c Makefile *.png README
+	tar -czvf lab0-105123806.tar.gz lab0.c Makefile breakpoint.png backtrace.png README
 #Smoke Check cases
 basic_one:
 	echo "hello word" > file.txt; \
