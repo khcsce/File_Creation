@@ -11,7 +11,7 @@ default:
 check: default basic_one basic_two basic_three invalid_option nonwritable_outputfile noexist_inputfile segfault_test catch_test 	
 	if [ -s log.txt ]; \
 	then \
-		echo "OH NO ERRORS EXISTS" \
+		echo "OH NO ERRORS EXISTS"; \
 	        cat log.txt; \
 		rm -f log.txt; \
 	else \
